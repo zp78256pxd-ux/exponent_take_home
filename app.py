@@ -270,16 +270,7 @@ def main():
                         scenario_paths,
                     )
                 )
-            st.success("Benchmark complete")
-
-        fleet_bench = st.session_state.get("fleet_benchmark")
-        if fleet_bench:
-            st.markdown("**Fleet benchmark**")
-            st.caption(
-                f"Avg runtime std / opt: "
-                f"{_format_runtime(fleet_bench.get('avg_scheduler_runtime_seconds'))} · "
-                f"{_format_runtime(fleet_bench.get('avg_optimizer_runtime_seconds'))}"
-            )
+            # Intentionally no UI output here to keep sidebar clean.
 
     st.markdown(
         f"""
