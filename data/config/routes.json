@@ -1,0 +1,69 @@
+{
+  "route_id": "south_corridor",
+
+  "stations": [
+    { "id": "BLR", "name": "Bengaluru" },
+    { "id": "A", "name": "A" },
+    { "id": "B", "name": "B" },
+    { "id": "C", "name": "C" },
+    { "id": "D", "name": "D" },
+    { "id": "KOC", "name": "Kochi" }
+  ],
+
+  "edges": [
+    {
+      "from": "BLR",
+      "to": "A",
+      "distance_km": 100
+    },
+    {
+      "from": "A",
+      "to": "BLR",
+      "distance_km": 100
+    },
+
+    {
+      "from": "A",
+      "to": "B",
+      "distance_km": 120
+    },
+    {
+      "from": "B",
+      "to": "A",
+      "distance_km": 120
+    },
+
+    {
+      "from": "B",
+      "to": "C",
+      "distance_km": 100
+    },
+    {
+      "from": "C",
+      "to": "B",
+      "distance_km": 100
+    },
+
+    {
+      "from": "C",
+      "to": "D",
+      "distance_km": 120
+    },
+    {
+      "from": "D",
+      "to": "C",
+      "distance_km": 120
+    },
+
+    {
+      "from": "D",
+      "to": "KOC",
+      "distance_km": 100
+    },
+    {
+      "from": "KOC",
+      "to": "D",
+      "distance_km": 100
+    }
+  ]
+}
