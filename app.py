@@ -3,8 +3,6 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
-
-from scheduler.benchmark import run_fleet_benchmark
 from scheduler.explainer import explain_scenario_result
 from scheduler.loader import (
     load_route,
@@ -256,21 +254,7 @@ def main():
         with st.expander("Raw scenario JSON"):
             st.json(scenario_raw)
 
-        st.divider()
-        if st.button(
-            "Benchmark all 5 scenarios",
-            use_container_width=True,
-            help="Runs V2 and V4 on every scenario once",
-        ):
-            with st.spinner("Benchmarking fleet…"):
-                bench_scheduler = Scheduler(world, route, stations)
-                st.session_state["fleet_benchmark"] = (
-                    run_fleet_benchmark(
-                        bench_scheduler,
-                        scenario_paths,
-                    )
-                )
-            # Intentionally no UI output here to keep sidebar clean.
+        # Benchmark intentionally removed from UI for submission.
 
     st.markdown(
         f"""
